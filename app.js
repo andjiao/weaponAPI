@@ -34,6 +34,8 @@ app.get('/weapons/:id', (req,res)=>{
 app.post('/weapons', (req,res)=>{
   
     const weapon ={
+        //havde det været til en database, ville id inkrementerer automatisk
+        //da den blot tilføjes til et array, må inkrementering ske manuel, hvilket er årsagen til weapon.lenght + 1
         id: weapons.length + 1,
         name: req.body.name
     }
